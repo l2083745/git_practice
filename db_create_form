@@ -1,0 +1,5 @@
+require 'sqlite3'
+
+db = SQLite3::Database.new'db/form.db'
+
+p db.execute('CREATE TABLE comments(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, title TEXT, contents TEXT)')
