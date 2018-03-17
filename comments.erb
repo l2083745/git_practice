@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1>内容</h1>
+<form action="share" method="POST">
+<div>
+ <div>
+ </div>  
+ <% comments.each do |row| %>
+ <div>
+   名前:
+   <p>
+     <%=row['name']%>
+   </p>
+   
+   タイトル：
+   <p>
+     <%=row['title']%>
+   </p>
+
+   必要機材：
+   <p>
+     <%=row['equipment']%>
+   </p>
+
+   記事内容：
+   <p>
+     <%=row['message']%>
+   </p>
+
+ </div>  
+ <% end %>  
+</div>
+</form>
+</body>
+</html>
+
+<% comments.each do |row| %>
+  <%= row["comments"]%><br>
+  <% end %>
